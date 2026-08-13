@@ -1,4 +1,6 @@
-const API_BASE_URL = '/api';
+const API_BASE_URL = import.meta.env.PROD
+  ? 'https://cricket-arena-backend.onrender.com/api'
+  : '/api';
 
 const TOKEN_KEY = 'token';
 const TOKEN_TIMESTAMP_KEY = 'token_saved_at';
