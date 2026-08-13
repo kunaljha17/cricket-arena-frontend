@@ -5,6 +5,8 @@ import { Calendar, TrendingUp, Trophy, Activity, Clock, Users } from 'lucide-rea
 import { useAuth } from '../context/AuthContext';
 import { apiFetch } from '../services/api';
 
+import ConfirmedBookingCountdown from '../components/ConfirmedBookingCountdown';
+
 export default function Dashboard() {
   const { user } = useAuth();
   const [bookings, setBookings] = useState([]);
@@ -70,6 +72,9 @@ export default function Dashboard() {
           <h1 className="page-title">Welcome back, {user?.name}!</h1>
           <p className="page-subtitle">Here's your cricket practice overview</p>
         </div>
+
+        {/* Confirmed Booking Countdown Banner (shown when Admin approves a booking) */}
+        <ConfirmedBookingCountdown bookings={bookings} />
 
         {/* Stats Grid */}
         <div className="grid-stats">

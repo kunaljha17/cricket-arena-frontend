@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import { Plus, Calendar } from 'lucide-react';
 import { apiFetch } from '../services/api';
+import ConfirmedBookingCountdown from '../components/ConfirmedBookingCountdown';
 
 export default function Bookings() {
   const [bookings, setBookings] = useState([]);
@@ -36,6 +37,9 @@ export default function Bookings() {
             <span>Book New Session</span>
           </Link>
         </div>
+
+        {/* Confirmed Booking Countdown Banner */}
+        <ConfirmedBookingCountdown bookings={bookings} />
 
         {loading ? (
           <div style={{ textAlign: 'center', padding: '3rem 0', color: 'var(--text-muted)' }}>

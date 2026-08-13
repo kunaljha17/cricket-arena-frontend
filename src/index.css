@@ -532,4 +532,40 @@ button {
   .auth-card {
     padding: 1.5rem;
   }
+
+  .confirmed-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
 }
+
+/* Confirmed Booking Countdown Box Styling */
+.countdown-box {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  min-width: 54px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.countdown-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a7f3d0;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
