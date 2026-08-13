@@ -1,6 +1,6 @@
-const API_BASE_URL = import.meta.env.PROD
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD
   ? 'https://cricket-arena-backend.onrender.com/api'
-  : '/api';
+  : '/api');
 
 const TOKEN_KEY = 'token';
 const TOKEN_TIMESTAMP_KEY = 'token_saved_at';
